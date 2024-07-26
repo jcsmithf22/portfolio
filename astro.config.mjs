@@ -4,5 +4,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
+  site: "https://portfolio.josiahsmith.dev",
   integrations: [mdx(), sitemap(), tailwind()],
 });
