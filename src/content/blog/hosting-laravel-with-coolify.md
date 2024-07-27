@@ -20,7 +20,7 @@ Create a new project in Coolify. A production environment is automatically creat
 
 ![Github app select](/laravel-on-coolify/github-app-select.png)
 
-Select "Private Respository (with Github App)." You will be prompted to create a new app. This process is straightforward.
+Select "Private Repository (with Github App)." You will be prompted to create a new app. This process is straightforward.
 
 Once the Github App has been created, select it and choose the repository for your Laravel application. Change the port from 3000 to 80. Make sure Nixpacks is selected as the build pack.
 
