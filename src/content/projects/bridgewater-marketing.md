@@ -1,7 +1,7 @@
 ---
-title: Bridgewater Marketing Group
+title: Bridgewater Marketing Group (incomplete)
 description: Sophisticated marketing agency website.
-date: 2024-07-24
+date: 2024-07-23
 demoURL: https://bwm.josiahsmith.dev
 repoURL: https://github.com/jcsmithf22/bridgewater
 ---
