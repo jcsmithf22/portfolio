@@ -36,7 +36,7 @@ header {
 
 .nav {
   @apply flex flex-wrap gap-y-2 justify-between;
-  @apply bg-white/75 dark:bg-neutral-800/25 py-3 px-4 rounded-lg;
+  @apply bg-white/25 dark:bg-neutral-800/25 py-3 px-4 rounded-lg;
   @apply border dark:border-white/10;
   @apply backdrop-blur-sm saturate-200;
   box-shadow: 0 0px 15px -3px rgb(0 0 0 / 0.1), 0 0px 6px -4px rgb(0 0 0 / 0.1);
