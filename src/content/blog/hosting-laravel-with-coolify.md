@@ -1,8 +1,8 @@
 ---
-title: Laravel on Coolify
-date: 2024-07-26
-description: A guide to hosting a Laravel appliction using Coolify
 slug: laravel-on-coolify
+title: Laravel on Coolify
+description: A guide to hosting a Laravel application using Coolify
+date: 2024-07-25
 ---
 
 [Coolify](https://coolify.io/) is an incredible open source software that enables you to self-host your websites, applications, databases, and other services on your own hardware.
