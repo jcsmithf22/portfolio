@@ -56,6 +56,12 @@ article {
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
+.copy-code {
+  @apply absolute -right-2 -top-2 shadow;
+  @apply bg-purple-500 text-white px-1 py-0.5 rounded m-0.5;
+  @apply hover:bg-purple-600 transition-colors;
+}
+
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
