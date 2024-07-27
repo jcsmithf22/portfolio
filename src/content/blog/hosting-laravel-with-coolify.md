@@ -61,7 +61,7 @@ Head back to the Environmental Variables for your Laravel application. Add the f
 | DB_USERNAME | postgres | Database user |
 | DB_PASSWORD | | Database password |
 
-You can use a tool such as TablePlus or psql to add databases.
+You can use a tool such as TablePlus or psql to add databases if you would like a specific database for your application.
 
 Finally, we can customize our deployment configuration. Create a ```nixpacks.toml``` file in the root directory of your project. Add the following to the file:
 ```toml
@@ -71,4 +71,14 @@ cmds = ["mkdir -p /var/log/nginx && mkdir -p /var/cache/nginx", "composer instal
 [phases.build]
 cmds = ["echo build started", "npm run build", "php artisan migrate --force", "php artisan optimize", "rm -rf node_modules", "echo build ended"]
 ```
-While not necessary, this configuration file improves the commands normally run by Nixpacks during PHP deployment. Save the file and push the changes to Github.
+While not completely necessary, this configuration file improves the commands normally run by Nixpacks during PHP deployment. Save the file and push the changes to Github.
+
+Congratulations! You should now be able to deploy and visit your site.
+
+### Next steps
+Adding a domain is as simple as creating an A record pointing to your server IP address and adding the domain in the Coolify configuration for your application. Coolify will automatically create a SSL certificate to enable HTTPS for your site.
+
+![Domain field](/laravel-on-coolify/domain.png)
+
+### Troubleshooting
+If you run into an error, let's solve it together! Reach out to me on [X](https://x.com/Sw1tchy_) with questions or feedback. I will make sure to update this post with any helpful information or anything I may have forgotten to add.
