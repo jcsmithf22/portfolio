@@ -9,16 +9,6 @@ slug: laravel-on-coolify
 
 While not as simple as services like Vercel or Laravel Forge, Coolify is more flexible and free of charge - you'll only be paying the cost of your own servers.
 
-Hosting a web application yourself can be tricky. Some common challenges include:
-
-1. Server setup and configuration
-2. Security concerns
-3. Continuous deployment
-4. Monitoring and maintenance
-5. Backups
-
-Coolify addresses these challenges and more, making self-hosting an option for a broader audience.
-
 ### Getting started
 This tutorial assumes you already have a server with Coolify installed. The process is generally simple, and the [docs](https://coolify.io/docs/installation) provide all the information necessary.
 
