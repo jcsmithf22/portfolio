@@ -63,7 +63,7 @@ const { Content } = await post.render();
     codeBlock.setAttribute("tabindex", "0");
     codeBlock.appendChild(copyButton);
     // wrap codebock with relative parent element
-    codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+    codeBlock.parentNode?.insertBefore(wrapper, codeBlock);
     wrapper.appendChild(codeBlock);
 
     copyButton.addEventListener("click", async () => {
@@ -71,8 +71,9 @@ const { Content } = await post.render();
     });
   }
 
-  async function copyCode(block, button) {
+  async function copyCode(block: HTMLElement, button: HTMLElement) {
     let code = block.querySelector("code");
+    if (!code) return;
     let text = code.innerText;
 
     await navigator.clipboard.writeText(text);
