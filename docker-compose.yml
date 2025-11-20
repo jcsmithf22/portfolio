@@ -1,6 +1,8 @@
 services:
   web:
     build: .
+    networks:
+      - proxy
     labels:
       - traefik.enable=true
       - traefik.http.routers.portfolio.rule=Host(`v1.jcs.works`)
