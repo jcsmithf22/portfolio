@@ -42,7 +42,8 @@
 
 	html,
 	body {
-		@apply size-full;
+		/* @apply size-full; */
+		min-height: 100vh;
 	}
 
 	body {
@@ -88,9 +89,11 @@
 	}
 
 	.copy-code {
-		@apply absolute -right-2 -top-2 shadow-sm;
-		@apply bg-purple-500 text-white px-1 py-0.5 rounded-sm m-0.5;
-		@apply hover:bg-purple-600 transition-colors;
+		--color: oklch(0.2781 0.0117 248.25);
+		--hover-color: oklch(from var(--color) calc(l + 0.08) c h);
+		@apply absolute right-1 top-1;
+		@apply bg-(--color) text-white border border-white/20 px-2 py-0.5 rounded-xs m-0.5 font-light;
+		@apply hover:bg-(--hover-color) transition-colors;
 	}
 }
 

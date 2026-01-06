@@ -46,7 +46,7 @@ const { Content } = await render(post);
 </PageLayout>
 
 <script>
-  const copyButtonLabel = "Copy Code";
+  const copyButtonLabel = "Copy";
   function setupCodeCopyButtons() {
     const codeBlocks = Array.from(document.querySelectorAll("pre"));
 
@@ -78,7 +78,7 @@ const { Content } = await render(post);
     await navigator.clipboard.writeText(text);
 
     // visual feedback that task is completed
-    button.innerText = "Code Copied";
+    button.innerText = "Copied";
 
     setTimeout(() => {
       button.innerText = copyButtonLabel;
