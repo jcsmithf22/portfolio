@@ -3,11 +3,15 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
-export default defineConfig({
-	site: "https://portfolio.josiahsmith.dev",
-	integrations: [mdx(), sitemap()],
+import cloudflare from "@astrojs/cloudflare";
 
-	vite: {
-		plugins: [tailwindcss()],
-	},
+export default defineConfig({
+  site: "https://portfolio.josiahsmith.dev",
+  integrations: [mdx(), sitemap()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  adapter: cloudflare(),
 });
