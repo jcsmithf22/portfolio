@@ -4,10 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://portfolio.josiahsmith.dev",
-  integrations: [mdx(), sitemap()],
+	site: "https://portfolio.josiahsmith.dev",
+	integrations: [mdx(), sitemap()],
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
