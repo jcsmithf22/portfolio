@@ -35,11 +35,30 @@ const work = await Promise.all(
 );
 ---
 
+<script>
+  import { createDraggable, spring } from "animejs";
+
+  createDraggable("#pfp", {
+    container: "#pfp-container",
+    containerFriction: 0,
+    // releaseStiffness: 300,
+    // releaseDamping: 15,
+    // releaseMass: 1,
+    releaseEase: spring({
+      stiffness: 300,
+      damping: 15,
+      mass: 1
+    })
+  })
+</script>
+
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <div class="animate flex items-center">
-      <div style="user-select: none; touch-action: none; transform: none;">
+      <div id="pfp-container" class="rounded-full bg-stone-200 dark:bg-neutral-800 border border-dashed border-stone-400 dark:border-neutral-700">
+      <div id="pfp" style="user-select: none; touch-action: none; transform: none;" class="-m-px">
         <Image src={profile} loading="eager" fetchpriority="high" alt="Josiah" class="h-16 w-16 rounded-full hover:scale-105 transition-transform" />
+      </div>
       </div>
       <div class="ml-4 font-semibold text-black dark:text-white">
         <h1>Josiah Smith</h1>

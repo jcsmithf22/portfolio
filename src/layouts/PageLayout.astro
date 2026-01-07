@@ -25,3 +25,27 @@ const { title, description } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<script>
+  import { hover } from "@lib/utils";
+  import { animate, spring } from "animejs";
+
+  const scale = 1.1;
+  const rotation = 25;
+  const duration = 150;
+
+  const config = {
+    stiffness: 300,
+    damping: 10,
+    mass: 1
+  };
+
+  hover("[data-component=boop]", (element) => {
+    animate(element, {
+      keyframes: [
+        { scale, rotate: rotation, duration, ease: "outSine"},
+        { scale: 1, rotate: 0, ease: spring(config) }
+      ]
+    })
+  })
+</script>
