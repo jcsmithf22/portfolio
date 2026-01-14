@@ -2,6 +2,8 @@
 import BackToTop from "@components/BackToTop.astro";
 import Container from "@components/Container.astro";
 import { SITE } from "@consts";
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="animate">
@@ -13,7 +15,7 @@ import { SITE } from "@consts";
     </div>
     <div class="flex justify-between items-center">
       <div>
-        &copy; 2024 {`|`} {SITE.NAME}
+        &copy; {year + ' | ' + SITE.NAME}
       </div>
       <div class="flex flex-wrap gap-1 items-center">
         <button

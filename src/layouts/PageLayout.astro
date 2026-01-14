@@ -40,12 +40,17 @@ const { title, description } = Astro.props;
     mass: 1
   };
 
-  hover("[data-component=boop]", (element) => {
-    animate(element, {
-      keyframes: [
-        { scale, rotate: rotation, duration, ease: "outSine"},
-        { scale: 1, rotate: 0, ease: spring(config) }
-      ]
+
+  function setup() {
+    hover("[data-component=boop]", (element) => {
+      animate(element, {
+        keyframes: [
+          { scale, rotate: rotation, duration, ease: "outSine"},
+          { scale: 1, rotate: 0, ease: spring(config) }
+        ]
+      })
     })
-  })
+  }
+
+  document.addEventListener("astro:page-load", setup);
 </script>
